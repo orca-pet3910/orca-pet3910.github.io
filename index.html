@@ -2,6 +2,9 @@
   <script>
     console.log("hey, if you read this, you're cool")
     alert("hi :D thanks for visiting this website... lol")
+    function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+    }
   </script>
   <style>
     body {
@@ -54,7 +57,7 @@
   <br>
   oh here is a nyan cat
   <br>
-  <iframe src="nyancat.svg", height=250, width=250, frameborder=0 />
+  <iframe src="nyancat.svg", height="250", width="250", frameborder="0" onload="resizeIframe(this)"/>
   
 </body>
 </html>
