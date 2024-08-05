@@ -1,1 +1,31 @@
-
+<html>
+  <head>
+    <style>
+      body {
+        font-family: 'Consolas', monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Installing Windows anywhere - is this real and how to do it?</h1><br>
+    <h2>Is this real?</h2>
+    Yup! I made a RedibleSky 10 setup using this method.<br>
+    <h2>How to do it?</h2>
+    After setup reboots, boot back to it. Then press Shift + F10 and type this line by line into the command prompt:<br>
+    <code>
+      C:
+      ren "C:\Windows" "C:\[the name for the windows folder]"
+      diskpart
+      sel dis 0
+      lis par
+      sel par X (where X is the partition marked as System)
+      ass letter w
+      exit
+      bcdboot C:\[windows folder] /s W:
+      bcdedit
+      bcdedit /set [identifier for windows boot loader] systemroot \[windows folder name]
+      bcdedit /set [identifier from before] path \[windows folder]\system32\winload.efi
+      regedit
+    </code>
+  </body>
+</html>
