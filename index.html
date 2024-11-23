@@ -6,11 +6,18 @@
     function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
-    function something(obj) {
+    /*function something(obj) {
       while (true) {
         obj.style.width = obj.contentWindow.document.width + 'px'
       }
+    }*/
+    function updateWidth(){
+      while (true) {
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        document.getElementById("barthing").style.padding = '10px '+w+'px';
+      }
     }
+    updateWidth()
   </script>
   <meta encoding="utf-8">
   <meta name="image" content="https://orcapet.is-a.dev/icon/favicon.png">
@@ -39,7 +46,7 @@
         font-family: 'Courier New', monospace;
         font-size: 20px;
     }
-    .barthing {
+    #barthing {
         background-color: #000000;
         font-family: 'Courier New', monospace;
         color: #ffffff;
@@ -58,7 +65,7 @@
 </head>
   <body>
     <title>orca.pet's HTML website thingy</title>
-<div class="barthing" onload="something(this)">
+<div id="barthing">
     orca.pet's HTML website thingy
     </div>
     
