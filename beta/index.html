@@ -2,8 +2,6 @@
 <html lang="en_us"><head>
   <script>
     console.log("hey, if you read this, you're cool")
-    var ms = 100
-    var promise = new Promise(resolve => setTimeout(resolve, ms));
     //alert("hi :D thanks for visiting this website... lol\npress cancel/OK/close to continue")
     function resizeIframe(obj) {
       obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
@@ -13,13 +11,9 @@
         obj.style.width = obj.contentWindow.document.width + 'px'
       }
     }*/
-    function sleep(ms) {
-      return promise;
-    }
-    async function updateWidth(){
+    function updateWidth(){
       while (true) {
         var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        await sleep(ms);
         document.getElementById("barthing").style.padding = '10px '+w+'px';
       }
     }
