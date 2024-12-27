@@ -3,8 +3,8 @@
   <script>
     console.log("hey, if you read this, you're cool")
     //alert("hi :D thanks for visiting this website... lol\npress cancel/OK/close to continue")
-    function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+    async function resizeIframe(obj) {
+      obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
     /*function something(obj) {
       while (true) {
@@ -22,7 +22,7 @@
       }
     }
     while (true) {
-      await updateWidth();
+      updateWidth();
     }
   </script>
   <meta encoding="utf-8">
