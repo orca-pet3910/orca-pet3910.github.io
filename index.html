@@ -11,13 +11,19 @@
         obj.style.width = obj.contentWindow.document.width + 'px'
       }
     }*/
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
     async function updateWidth(){
       while (true) {
         var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        await sleep(100);
         document.getElementById("barthing").style.padding = '10px '+w+'px';
       }
     }
-    updateWidth()
+    while (true) {
+      await updateWidth();
+    }
   </script>
   <meta encoding="utf-8">
   <meta name="image" content="https://orcapet.is-a.dev/icon/favicon.png">
