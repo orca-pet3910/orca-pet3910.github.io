@@ -3,7 +3,7 @@
   <script>
     console.log("hey, if you read this, you're cool")
     //alert("hi :D thanks for visiting this website... lol\npress cancel/OK/close to continue")
-    async function resizeIframe(obj) {
+    function resizeIframe(obj) {
       obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
     }
     /*function something(obj) {
@@ -21,9 +21,7 @@
         document.getElementById("barthing").style.padding = '10px '+w+'px';
       }
     }
-    while (true) {
-      updateWidth();
-    }
+    updateWidth()
   </script>
   <meta encoding="utf-8">
   <meta name="image" content="https://orcapet.is-a.dev/icon/favicon.png">
