@@ -37,10 +37,11 @@
     20 - boot list execution<br>
     3A - boot file verification<br>
     3F - boot file verification success<br>
-    7F - main boot process<br>
+    7F - main boot process, also means that PBGCC (Pre-Boot Game Component Check) finished successfully<br>
     AB - main boot process finish<br>
     00 - desktop input wait<br>
     70 - boot file verification fail, system self-destruction init<br>
-    AE - firmware GUI disabled or illegal access to pre-boot components
+    AE - firmware GUI disabled or illegal access to pre-boot components<br>
+    7D - PBGCC finished successfully, but the game `beep' sound asset wasn't found which can lead to bugs and errors
   </body>
 </html>
