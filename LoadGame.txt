@@ -1,0 +1,8 @@
+game.Players.LocalPlayer:LoadCharacter()
+if workspace:FindFirstChild("Part") then
+	workspace.Part.Parent = nil
+end
+local part = Instance.new("Part", workspace)
+part.Anchored = true
+part.Size = Vector3.new(512, 1, 512)
+game:GetService("RunService"):Run()
