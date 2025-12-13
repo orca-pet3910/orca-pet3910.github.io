@@ -11,12 +11,12 @@
         obj.style.width = obj.contentWindow.document.width + 'px'
       }
     }*/
-    function updateWidth(){
-      var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      document.getElementById("barthing").style.width = '10px '+w+'px';
-      requestAnimationFrame(updateWidth);
-    }
-    updateWidth()
+    // function updateWidth(){
+    //   var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    //   document.getElementById("barthing").style.width = '10px '+w+'px';
+    //   requestAnimationFrame(updateWidth);
+    // }
+    // updateWidth()
   </script>
   <meta encoding="utf-8">
   <meta name="image" content="https://orcapet.is-a.dev/icon/favicon.png">
@@ -55,6 +55,7 @@
         offset: 5px;
         font-size: 20px;
         text-align: center;
+        width: 10vw
     }
     .centered {
         text-align: center;
