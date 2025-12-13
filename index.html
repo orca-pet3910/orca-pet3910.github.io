@@ -15,6 +15,7 @@
       var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       document.getElementById("barthing").style.width = '10px '+w+'px';
     }
+    window.addEventListener("resize", updateWidth);
     updateWidth()
   </script>
   <meta encoding="utf-8">
